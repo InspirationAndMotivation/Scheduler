@@ -1,0 +1,73 @@
+.SchedulerCalendar {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-inline: 4rem;
+
+  .SchedulerHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .CurrentDate {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-items: left;
+
+      p {
+        margin-top: 0;
+        font-size: large;
+      }
+    }
+
+    .DropdownsMenu {
+      display: flex;
+      align-items: center;
+
+      .TimeModSelect {
+        border: 0.15rem solid #e5e5e5;
+        border-radius: 0.75rem;
+        padding-inline: 2rem;
+        height: 4rem;
+        font-size: larger;
+
+        &:focus {
+          border: 0.15rem solid #eeab00;
+        }
+      }
+    }
+  }
+
+  .SchedulerGrid {
+    align-content: center;
+    justify-content: center;
+    border-collapse: collapse;
+    margin-block: 2rem;
+
+    .TableHeader {
+      align-content: center;
+      justify-content: center;
+      border-top: none;
+
+      .ColumnName {
+        padding-inline: 1.75rem;
+        border-top: none;
+        font-size: x-large;
+        font-weight: 300;
+      }
+    }
+
+    th,
+    td {
+      min-width: 6rem;
+      height: 4rem;
+      border: 0.15rem solid #e5e5e5;
+    }
+
+    .MainColumn {
+      border-left: none;
+    }
+  }
+}
