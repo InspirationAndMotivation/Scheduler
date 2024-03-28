@@ -44,8 +44,15 @@
       border-radius: 50%;
       transition: all 0.3s ease-in-out;
       align-self: center;
-      width: 3rem;
-      height: 3rem;
+      width: 3.5rem;
+      height: 3.5rem;
+
+      //TODO: Triangles instead of circles
+      box-shadow: 1.5em 1.5em 0 2.5em gold inset, 0 -2.5em 0 -1.5em gold,
+        1.75em -1.75em 0 -1.5em gold, 2.5em 0 0 -1.5em gold,
+        1.75em 1.75em 0 -1.5em gold, 0 2.5em 0 -1.5em gold,
+        -1.75em 1.75em 0 -1.5em gold, -2.5em 0 0 -1.5em gold,
+        -1.75em -1.75em 0 -1.5em gold;
     }
   }
 }
