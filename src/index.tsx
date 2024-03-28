@@ -7,10 +7,8 @@ const root = createRoot(document.getElementById('root') as HTMLDivElement);
 
 root.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
     <App></App>
-    {/* </Provider> */}
   </React.StrictMode>
 );
 
-// reportWebVitals();
+//reportWebVitals();
