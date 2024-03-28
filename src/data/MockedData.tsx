@@ -1,3 +1,5 @@
+import { Day } from '../interfaces/DateInterfaces';
+
 export const monthNames = [
   'January',
   'February',
@@ -41,7 +43,7 @@ export const timeZones = [
   { id: -12, name: 'International Date Line West (IDLW)' },
 ];
 
-export const weekDays = [
+export const weekDays: Array<Day> = [
   { id: 0, name: '', shortName: '' },
   { id: 1, name: 'Monday', shortName: 'Mon.' },
   { id: 2, name: 'Tuesday', shortName: 'Tue.' },
@@ -53,28 +55,28 @@ export const weekDays = [
 ];
 
 export const timeRanges = [
-  { id: 1, twelveMod: '1 AM', twentyfourMod: '1:00' },
-  { id: 2, twelveMod: '2 AM', twentyfourMod: '2:00' },
-  { id: 3, twelveMod: '3 AM', twentyfourMod: '3:00' },
-  { id: 4, twelveMod: '4 AM', twentyfourMod: '4:00' },
-  { id: 5, twelveMod: '5 AM', twentyfourMod: '5:00' },
-  { id: 6, twelveMod: '6 AM', twentyfourMod: '6:00' },
-  { id: 7, twelveMod: '7 AM', twentyfourMod: '7:00' },
-  { id: 8, twelveMod: '8 AM', twentyfourMod: '8:00' },
-  { id: 9, twelveMod: '9 AM', twentyfourMod: '9:00' },
-  { id: 10, twelveMod: '10 AM', twentyfourMod: '10:00' },
-  { id: 11, twelveMod: '11 AM', twentyfourMod: '11:00' },
-  { id: 12, twelveMod: '12 AM', twentyfourMod: '12:00' },
-  { id: 13, twelveMod: '1 PM', twentyfourMod: '13:00' },
-  { id: 14, twelveMod: '2 PM', twentyfourMod: '14:00' },
-  { id: 15, twelveMod: '3 PM', twentyfourMod: '15:00' },
-  { id: 16, twelveMod: '4 PM', twentyfourMod: '16:00' },
-  { id: 17, twelveMod: '5 PM', twentyfourMod: '17:00' },
-  { id: 18, twelveMod: '6 PM', twentyfourMod: '18:00' },
-  { id: 19, twelveMod: '7 PM', twentyfourMod: '19:00' },
-  { id: 20, twelveMod: '8 PM', twentyfourMod: '20:00' },
-  { id: 21, twelveMod: '9 PM', twentyfourMod: '21:00' },
-  { id: 22, twelveMod: '10 PM', twentyfourMod: '22:00' },
-  { id: 23, twelveMod: '11 PM', twentyfourMod: '23:00' },
-  { id: 24, twelveMod: '12 PM', twentyfourMod: '00:00' },
+  { id: 1, twelveMod: '1:00 AM', twentyfourMod: '1:00' },
+  { id: 2, twelveMod: '2:00 AM', twentyfourMod: '2:00' },
+  { id: 3, twelveMod: '3:00 AM', twentyfourMod: '3:00' },
+  { id: 4, twelveMod: '4:00 AM', twentyfourMod: '4:00' },
+  { id: 5, twelveMod: '5:00 AM', twentyfourMod: '5:00' },
+  { id: 6, twelveMod: '6:00 AM', twentyfourMod: '6:00' },
+  { id: 7, twelveMod: '7:00 AM', twentyfourMod: '7:00' },
+  { id: 8, twelveMod: '8:00 AM', twentyfourMod: '8:00' },
+  { id: 9, twelveMod: '9:00 AM', twentyfourMod: '9:00' },
+  { id: 10, twelveMod: '10:00 AM', twentyfourMod: '10:00' },
+  { id: 11, twelveMod: '11:00 AM', twentyfourMod: '11:00' },
+  { id: 12, twelveMod: '12:00 AM', twentyfourMod: '12:00' },
+  { id: 13, twelveMod: '1:00 PM', twentyfourMod: '13:00' },
+  { id: 14, twelveMod: '2:00 PM', twentyfourMod: '14:00' },
+  { id: 15, twelveMod: '3:00 PM', twentyfourMod: '15:00' },
+  { id: 16, twelveMod: '4:00 PM', twentyfourMod: '16:00' },
+  { id: 17, twelveMod: '5:00 PM', twentyfourMod: '17:00' },
+  { id: 18, twelveMod: '6:00 PM', twentyfourMod: '18:00' },
+  { id: 19, twelveMod: '7:00 PM', twentyfourMod: '19:00' },
+  { id: 20, twelveMod: '8:00 PM', twentyfourMod: '20:00' },
+  { id: 21, twelveMod: '9:00 PM', twentyfourMod: '21:00' },
+  { id: 22, twelveMod: '10:00 PM', twentyfourMod: '22:00' },
+  { id: 23, twelveMod: '11:00 PM', twentyfourMod: '23:00' },
+  { id: 24, twelveMod: '12:00 PM', twentyfourMod: '00:00' },
 ];
