@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import './Scheduler.scss';
 import SchedulerGrid from './SchedulerGrid/SchedulerGrid';
 import SchedulerHeader from './SchedulerGrid/ScheduleHeader';

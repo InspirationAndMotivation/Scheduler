@@ -2,13 +2,20 @@ import React, { useContext, useEffect, useState } from 'react';
 import { TimeModsEnum } from '../../../enums/DatesEnum';
 import { AppContext } from '../../../store';
 import { timeRanges, weekDays } from '../../../data/MockedData';
+import { getWeekByDay } from '../../../utils/DateOperations';
+import { getDayOfYear } from 'date-fns';
 
 const SchedulerGrid = () => {
-  const { timeMod, setTimeMod } = useContext(AppContext);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { timeMod, setTimeMod, today, currentWeek, setCurrentWeek } =
+    useContext(AppContext);
+
   const [width, setWidth] = useState(window.innerWidth);
   const [isResolutionSmall, setIsResolutionSmall] = useState(width < 1600);
 
   useEffect(() => {
+    setCurrentWeek(getWeekByDay(today));
+
     const updateWindowDimensions = () => {
       const newWidth = window.innerWidth;
       setWidth(newWidth);
@@ -21,6 +28,9 @@ const SchedulerGrid = () => {
     setIsResolutionSmall(width < 1600);
   }, [width]);
 
+  const isDateToday = (date: Date) =>
+    getDayOfYear(date) === getDayOfYear(today);
+
   return (
     <>
       <table className="SchedulerGrid">
@@ -29,6 +39,15 @@ const SchedulerGrid = () => {
             {weekDays.map((day) => (
               <th className="ColumnName MainColumn" key={day.id}>
                 {isResolutionSmall ? day.shortName : day.name}
+                {day.id > 0 && currentWeek && (
+                  <p
+                    className={`WeekDates ${
+                      isDateToday(currentWeek[day.id - 1]) ? 'TodaysDate' : ''
+                    }`}
+                  >
+                    {currentWeek[day.id - 1].getDate()}
+                  </p>
+                )}
               </th>
             ))}
           </tr>
