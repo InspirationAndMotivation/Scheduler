@@ -3,16 +3,28 @@ import './App.css';
 import Toolbar from './components/Toolbar';
 import Scheduler from './components/Scheduler';
 import { AppContext } from './store';
-import { TimeModsEnum } from './enums/DatesEnum';
+import { getWeekByDay } from './utils/DateOperations';
 
 const App = () => {
+  //TODO: Implement theme changing
   // const [theme, setTheme] = useState('');
+
   const [timeMod, setTimeMod] = useState<string>(
-    TimeModsEnum.twelveHours as string
+    JSON.parse(localStorage.getItem('timeFormat') as string)
   );
+  const [today] = useState<Date>(new Date());
+  const [currentWeek, setCurrentWeek] = useState(getWeekByDay(today));
 
   return (
-    <AppContext.Provider value={{ timeMod, setTimeMod }}>
+    <AppContext.Provider
+      value={{
+        timeMod,
+        setTimeMod,
+        today,
+        currentWeek,
+        setCurrentWeek,
+      }}
+    >
       <div className="App">
         <Toolbar></Toolbar>
         <Scheduler></Scheduler>
