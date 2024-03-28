@@ -7,26 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body[theme='dark'] {
-  background-color: #141414;
-  color: white;
-}
-
+body[theme='dark'],
 body[theme='dark'] button,
 body[theme='dark'] select {
-  border-color: gold !important;
   background-color: #141414 !important;
   color: white !important;
 }
 
-body[theme='light'] {
-  background-color: white;
-  color: black;
-}
-
+body[theme='light'],
 body[theme='light'] button,
 body[theme='light'] select {
-  border-color: #e5e5e5 !important;
+  border-color: #e5e5e5;
   background-color: white !important;
   color: black !important;
 }
