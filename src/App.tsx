@@ -6,9 +6,6 @@ import { AppContext } from './store';
 import { getWeekByDay } from './utils/DateOperations';
 
 const App = () => {
-  //TODO: Implement theme changing
-  // const [theme, setTheme] = useState('');
-
   const [timeMod, setTimeMod] = useState<string>(
     JSON.parse(localStorage.getItem('timeFormat') as string)
   );

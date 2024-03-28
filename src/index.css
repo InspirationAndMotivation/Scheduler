@@ -7,6 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body[theme='dark'],
+body[theme='dark'] button,
+body[theme='dark'] select {
+  background-color: #141414 !important;
+  color: white !important;
+}
+
+body[theme='light'],
+body[theme='light'] button,
+body[theme='light'] select {
+  border-color: #e5e5e5;
+  background-color: white !important;
+  color: black !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

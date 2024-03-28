@@ -3,7 +3,6 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  margin-inline: 4rem;
 
   .SchedulerHeader {
     display: flex;
@@ -12,9 +11,15 @@
 
     .CurrentDate {
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
+      flex-direction: column;
       justify-items: left;
+      margin-top: 0;
+
+      .CurrentTime {
+        font-size: x-large;
+        font-weight: 400;
+      }
 
       .CurrentTime {
         font-size: x-large;
@@ -43,7 +48,7 @@
 
         &:focus,
         &:hover {
-          border: 0.15rem solid #ffb803;
+          border: 0.15rem solid gold;
         }
       }
 
@@ -53,9 +58,10 @@
         padding-inline: 2rem;
         height: 4rem;
         font-size: larger;
+        outline: none;
 
         &:focus {
-          border: 0.15rem solid #ffb803;
+          border: 0.15rem solid gold;
         }
       }
     }
@@ -88,7 +94,7 @@
           margin-block: 2rem;
           margin-inline: auto;
           border-radius: 0.75rem;
-          background-color: #ffb803;
+          background-color: gold;
           color: white;
         }
       }

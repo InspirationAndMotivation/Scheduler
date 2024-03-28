@@ -1,0 +1,51 @@
+.SchedulerToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .LogoSide {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .ToolbarLogo {
+      align-self: center;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    .AppName {
+      font-weight: 500;
+      align-content: center;
+    }
+  }
+
+  .ButtonsSide {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+
+    #theme-toggle {
+      visibility: hidden;
+    }
+
+    #theme-toggle:not(:checked) + label {
+      background-color: transparent;
+      box-shadow: inset -18px -16px 1px 1px #fff;
+    }
+
+    #theme-toggle:checked + label {
+      background-color: gold;
+    }
+
+    .ThemeToggle {
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      align-self: center;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

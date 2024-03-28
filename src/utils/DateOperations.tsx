@@ -21,6 +21,14 @@ export function getDisplayTime(is12H: boolean) {
   });
 }
 
+export function compareDates(firstDate: Date, secondDate: Date) {
+  return firstDate.getDate() === secondDate.getDate() &&
+    firstDate.getMonth() === secondDate.getMonth() &&
+    firstDate.getFullYear() === secondDate.getFullYear()
+    ? true
+    : false;
+}
+
 // TODO: Improve this function
 export function getWeekByDay(day: Date) {
   let dayIndex = 1;

@@ -11,8 +11,7 @@ import {
 import { add, sub } from 'date-fns';
 
 const SchedulerHeader = () => {
-  const { timeMod, setTimeMod, today, currentWeek, setCurrentWeek } =
-    useContext(AppContext);
+  const { timeMod, setTimeMod, today, setCurrentWeek } = useContext(AppContext);
   const [pickedDay, setPickedDay] = useState(today);
   const [currentDate, setCurrentDate] = useState(getDate(today));
   const [currentTime, setCurrentTime] = useState(

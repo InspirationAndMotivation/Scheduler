@@ -2,12 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { TimeModsEnum } from '../../../enums/DatesEnum';
 import { AppContext } from '../../../store';
 import { timeRanges, weekDays } from '../../../data/MockedData';
-import { getWeekByDay } from '../../../utils/DateOperations';
-import { getDayOfYear } from 'date-fns';
+import { compareDates, getWeekByDay } from '../../../utils/DateOperations';
 
 const SchedulerGrid = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { timeMod, setTimeMod, today, currentWeek, setCurrentWeek } =
+  const { timeMod, today, currentWeek, setCurrentWeek } =
     useContext(AppContext);
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -15,7 +13,9 @@ const SchedulerGrid = () => {
 
   useEffect(() => {
     setCurrentWeek(getWeekByDay(today));
+  }, [setCurrentWeek, today]);
 
+  useEffect(() => {
     const updateWindowDimensions = () => {
       const newWidth = window.innerWidth;
       setWidth(newWidth);
@@ -28,8 +28,7 @@ const SchedulerGrid = () => {
     setIsResolutionSmall(width < 1600);
   }, [width]);
 
-  const isDateToday = (date: Date) =>
-    getDayOfYear(date) === getDayOfYear(today);
+  const isDateToday = (date: Date) => compareDates(date, today);
 
   return (
     <>
