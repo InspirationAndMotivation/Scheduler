@@ -1,4 +1,4 @@
-import { Day } from './../interfaces/DateInterfaces';
+import { Day } from '../interfaces/SchedulerInterfaces';
 
 export const monthNames = [
   'January',

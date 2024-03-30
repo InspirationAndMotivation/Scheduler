@@ -58,6 +58,12 @@ const SchedulerHeader = () => {
 
   const handleAddEvent = () => {
     //TODO: Adding event functionality (rendering on the calendar + creation of the array with events)
+    /* Check if Row Number === Time of the event (1 AM -> 1st row, so If its 8AM-10AM, you need 8-9th rows)
+     * Then Check if Your date === Date on the top (column header), if true -> change background color + add text in the first cell
+     * (the highest one);
+     * Save events into the massive -> render its when needed week is opened
+     * Dont forget to remove borders (top and bottom)
+     */
   };
 
   return (
